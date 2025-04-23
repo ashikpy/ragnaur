@@ -42,3 +42,12 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.seperator {
+  background: #000000;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.5) 10%,
+    rgba(254, 220, 94, 1) 100%
+  );
+}
