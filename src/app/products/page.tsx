@@ -5,8 +5,10 @@ import { ProductData } from "@/utils/Data";
 export default function page() {
   return (
     <div className="mt-10">
-      <h1 className="text-center text-7xl font-black">Our Products</h1>
-      <div className="mt-14 grid grid-cols-4 gap-7">
+      <h1 className="text-center text-4xl font-black md:text-7xl">
+        Our Products
+      </h1>
+      <div className="mt-10 grid gap-7 md:mt-14 md:grid-cols-4">
         {ProductData.map((product, index) => (
           <div key={index} className="flex justify-center">
             <ProductCard

@@ -23,9 +23,11 @@ const Features = [
 
 export default function Features2() {
   return (
-    <div className="">
-      <h1 className="mb-20 text-center text-7xl font-black">Why Choose Us?</h1>
-      <div className="flex justify-center gap-5">
+    <div className="mt-10 md:mt-0">
+      <h1 className="mb-7 text-center text-3xl font-black md:mb-20 md:text-7xl">
+        Why Choose Us?
+      </h1>
+      <div className="m-4 flex flex-col justify-center gap-10 md:m-0 md:flex-row md:gap-5">
         {Features.map((feature, index) => {
           const borderColors = [
             "border-orange",
@@ -80,7 +82,9 @@ function SectionCard({
         <p>{icon}</p>
       </div>
       <h3 className="mt-10 text-xl font-bold">{title}</h3>
-      <p className="mt-3 leading-7 text-black/80">{description}</p>
+      <p className="mt-3 text-sm leading-6 text-black/80 md:text-base md:leading-7">
+        {description}
+      </p>
     </div>
   );
 }

@@ -5,9 +5,11 @@ import Image from "next/image";
 
 export default function WhatWeDo() {
   return (
-    <div>
-      <h1 className="text-7xl font-black">What We Do?</h1>
-      <div className="flex justify-between">
+    <div className="p-5 md:p-0">
+      <h1 className="mt-10 text-left text-3xl font-black md:mt-0 md:text-7xl">
+        What We Do?
+      </h1>
+      <div className="flex flex-col justify-between md:flex-row">
         <Section1 />
         <Section2 />
       </div>
@@ -17,15 +19,15 @@ export default function WhatWeDo() {
 
 const Section1 = () => {
   return (
-    <div className="flex gap-10">
+    <div className="flex flex-col gap-10 md:flex-row">
       <div className="flex flex-col">
-        <h2 className="mt-2 mb-10 text-3xl font-semibold text-black/80">
+        <h2 className="mt-1 mb-5 text-left text-lg font-semibold text-black/80 md:mt-2 md:mb-10 md:text-3xl">
           Every Tail Deserves a Meal!
         </h2>
         <Image
           src={indianDog1}
           alt="Indian Dog"
-          className="size-[450px] rounded-xl"
+          className="rounded-xl md:size-[450px]"
         />
       </div>
       <SubSection1 />
@@ -35,7 +37,7 @@ const Section1 = () => {
 
 const SubSection1 = () => {
   return (
-    <div className="flex flex-col justify-center gap-5">
+    <div className="flex flex-col justify-center gap-8 md:gap-5">
       <h2 className="max-w-sm text-3xl font-black">
         We are a Non-Profit Organization
       </h2>
@@ -45,7 +47,11 @@ const SubSection1 = () => {
         make a difference, one bowl at a time. Join us in our mission to provide
         food, shelter, and care for street dogs.
       </p>
-      <button className="bg-blue shadow-blue mt-4 w-max cursor-pointer rounded-xl px-8 py-4 font-semibold text-white shadow-2xl/50 transition-all duration-300 ease-in-out hover:shadow-2xl/100">
+      <div className="max-w-sm text-left text-xl font-semibold md:hidden">
+        <p>“Feed Yours, Save Another.</p>
+        <p>🐾 Every Bowl Brings Hope.”</p>
+      </div>
+      <button className="bg-blue shadow-blue w-max cursor-pointer rounded-xl px-8 py-4 text-sm font-semibold text-white shadow-2xl/50 transition-all duration-300 ease-in-out hover:shadow-2xl/100 md:text-base">
         Learn More &gt;
       </button>
     </div>
@@ -54,7 +60,7 @@ const SubSection1 = () => {
 
 const Section2 = () => {
   return (
-    <div>
+    <div className="hidden md:block">
       <Image
         src={indianDog2}
         alt="Indian Dog"

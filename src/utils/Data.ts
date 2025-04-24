@@ -15,7 +15,7 @@ export const ProductData = [
     description:
       "Packed with protein, this savory wild chicken meal is perfect for your dog's active lifestyle. Carefully crafted for optimal health and taste.",
     nonVeg: true,
-    type: "Meal",
+    type: "MEAL",
   },
   {
     id: 1,

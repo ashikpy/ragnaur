@@ -33,7 +33,7 @@ interface ProductData {
 
 const TopSection = ({ data }: { data: ProductData }) => {
   return (
-    <>
+    <div className="flex flex-col md:flex-row">
       <div className="grid w-full place-items-center">
         <Image src={data.Img} alt={data.title} />
       </div>
@@ -47,15 +47,17 @@ const TopSection = ({ data }: { data: ProductData }) => {
         nonVeg={data.nonVeg}
         onStock={data.available}
       />
-    </>
+    </div>
   );
 };
 
 const ButtonSection = () => {
   return (
     <>
-      <h1 className="mt-20 text-6xl font-black">Suggested Products</h1>
-      <div className="mt-10 grid grid-cols-4 gap-7">
+      <h1 className="mt-10 text-center text-3xl font-black md:mt-20 md:text-left md:text-6xl">
+        Suggested Products
+      </h1>
+      <div className="mt-10 grid gap-7 md:grid-cols-4">
         {ProductData.map((product, index) => (
           <div key={index} className="flex justify-center">
             <ProductCard
