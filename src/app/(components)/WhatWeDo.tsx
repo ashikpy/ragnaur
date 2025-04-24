@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function WhatWeDo() {
   return (
-    <div className="my-20">
+    <div className="my-20 mt-24">
       <h1 className="text-7xl font-black">What We Do?</h1>
       <div className="flex justify-between">
         <Section1 />
