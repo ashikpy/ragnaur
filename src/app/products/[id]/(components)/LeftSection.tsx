@@ -92,9 +92,9 @@ export default function LeftSection({
 
 const OutOfStockNotice = () => {
   return (
-    <div className="absolute top-0 right-0 flex items-center gap-2 rounded-bl-xl bg-black p-2 px-5 text-white">
+    <div className="absolute top-0 right-0 flex items-center gap-2 rounded-bl-xl bg-black p-2 px-5 text-sm text-white md:text-base">
       <p className="font-bold">Out Of Stock</p>
-      <OctagonX />
+      {/* <OctagonX /> */}
     </div>
   );
 };

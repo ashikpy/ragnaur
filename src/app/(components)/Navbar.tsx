@@ -62,10 +62,7 @@ export default function Navbar() {
 
 const MenuBarOptions = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div
-      onClick={handleClick}
-      className="absolute z-10 grid h-screen w-full place-items-center bg-black/80 backdrop-blur-xl"
-    >
+    <div className="absolute z-10 grid h-screen w-full place-items-center bg-black/80 backdrop-blur-xl">
       <ul className="flex flex-col items-center gap-6 text-2xl font-semibold text-white *:cursor-pointer">
         <li>
           <Link href={"/products"}>Products</Link>
@@ -80,7 +77,7 @@ const MenuBarOptions = ({ handleClick }: { handleClick: () => void }) => {
           <Link href={"#footer"}>Contact Us</Link>
         </li>
         <li>Login</li>
-        <CircleX />
+        <CircleX onClick={handleClick} />
       </ul>
     </div>
   );
