@@ -51,3 +51,7 @@ body {
     rgba(254, 220, 94, 1) 100%
   );
 }
+
+.dbg2 {
+  border: 2px dotted green;
+}
