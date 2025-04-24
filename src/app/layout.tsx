@@ -21,9 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.className} bg-black text-white`}>
+      <body
+        className={`${dmSans.className} flex min-h-screen flex-col bg-black text-white`}
+      >
         <Navbar />
-        <main>{children}</main>
+        <div className="flex-1">
+          <main className="container mx-auto">{children}</main>
+        </div>
         <Footer />
       </body>
     </html>

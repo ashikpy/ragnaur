@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="flex justify-start gap-4">
           <ul className="flex gap-4">
             <li>
-              <Link href={"/"}>Home</Link>
+              <Link href={"/products"}>Products</Link>
             </li>
             <li>
               <Link href={"/diy-recipes"}>DIY Recipes</Link>

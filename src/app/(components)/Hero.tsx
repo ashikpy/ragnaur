@@ -7,7 +7,7 @@ import Golden from "../../../public/golden.jpg";
 
 export default function Hero() {
   return (
-    <div className="mt-20 flex items-center justify-around p-10">
+    <div className="mt-10 flex items-center justify-around p-10">
       <div>
         <BigText />
         <Description />

@@ -8,13 +8,13 @@ const Features = [
       "We provide protein-rich meals made from ethically sourced chicken, fish, and lamb to ensure every dog gets the nutrition they deserve — because health starts in the bowl.",
   },
   {
-    icon: "🌱",
+    icon: "❤️",
     title: "Non-Profit, All Heart",
     description:
       "As a non-profit, your support directly funds meals for rescued and stray dogs. For every bag you buy, we donate one to a shelter — because every dog matters.",
   },
   {
-    icon: "❤️",
+    icon: "🧑🏻‍🔬",
     title: "Gut-Friendly, Vet-Approved",
     description:
       "Our recipes skip the fillers and focus on what matters: real meat, essential nutrients, and digestive support — all developed in partnership with veterinarians.",
@@ -24,8 +24,8 @@ const Features = [
 export default function Features2() {
   return (
     <div className="">
-      <h1 className="text-center text-7xl font-black">Why Choose Us?</h1>
-      <div className="my-10 flex justify-center gap-5">
+      <h1 className="mb-20 text-center text-7xl font-black">Why Choose Us?</h1>
+      <div className="flex justify-center gap-5">
         {Features.map((feature, index) => {
           const borderColors = [
             "border-orange",
@@ -33,6 +33,11 @@ export default function Features2() {
             "border-green",
           ];
           const bgColors = ["bg-orange/20", "bg-yellow/20", "bg-green/20"];
+          const shadowColors = [
+            "shadow-orange",
+            "shadow-yellow",
+            "shadow-green",
+          ];
           return (
             <SectionCard
               key={index}
@@ -41,6 +46,7 @@ export default function Features2() {
               description={feature.description}
               borderColor={borderColors[index]}
               bgColor={bgColors[index]}
+              shadowColors={shadowColors[index]}
             />
           );
         })}
@@ -55,16 +61,18 @@ function SectionCard({
   description,
   borderColor,
   bgColor,
+  shadowColors,
 }: {
   icon: string;
   title: string;
   description: string;
   borderColor: string;
   bgColor?: string;
+  shadowColors?: string;
 }) {
   return (
     <div
-      className={`flex max-w-sm flex-col items-center rounded-lg border-2 p-8 py-10 text-center shadow-xl/5 ${borderColor} ${bgColor}`}
+      className={`flex max-w-sm flex-col items-center rounded-lg border-2 p-8 py-10 text-center shadow-xl/25 ${borderColor} ${bgColor} ${shadowColors}`}
     >
       <div
         className={`grid size-[5rem] place-items-center rounded-full border-2 text-4xl font-bold ${borderColor} ${bgColor}`}

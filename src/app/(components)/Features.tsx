@@ -3,13 +3,12 @@ import React from "react";
 
 export default function Features() {
   return (
-    <div className="my-10">
-      <div className="bg-yellow flex w-full gap-24 rounded-2xl p-10">
+    <div>
+      <div className="bg-yellow mt-[-4rem] flex w-full gap-24 rounded-2xl p-10">
         <Feature1 />
         <Feature2 />
 
         <div className="seperator w-1"></div>
-
         <div className="flex flex-col justify-center text-3xl font-semibold">
           <h1>We Care About Your Dogs, Because They&apos;re Family!</h1> And We
           ❤️ it

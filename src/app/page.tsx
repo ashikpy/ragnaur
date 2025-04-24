@@ -7,7 +7,7 @@ import Features2 from "./(components)/Features2";
 
 export default function page() {
   return (
-    <div className="container mx-auto">
+    <div className="flex flex-col gap-36">
       <Hero />
       <Features />
       <Products />
