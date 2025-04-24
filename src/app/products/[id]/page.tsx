@@ -4,9 +4,14 @@ import LeftSection from "./(components)/LeftSection";
 import { ProductData } from "@/utils/Data";
 import ProductCard from "@/utils/ProductCard";
 
-export default function page({ params }: { params: { id: number } }) {
-  const data = ProductData[params.id];
-  console.log(data);
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function Page({ params }: PageProps) {
+  const data = ProductData[Number(params.id)];
 
   return (
     <>
