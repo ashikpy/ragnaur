@@ -23,24 +23,25 @@ export default function Navbar() {
   };
 
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-
-        y: -20,
-        filter: "blur(20px)",
-        transition: { ease: "easeIn", duration: 0.22 },
-      }}
-      animate={{
-        opacity: 1,
-
-        y: 0,
-        filter: "blur(0px)",
-        transition: { type: "spring", duration: 2 },
-      }}
-    >
+    <>
       {isOpen && <MenuBarOptions handleClick={handleClick} />}
-      <div className="container mx-auto my-8">
+      <motion.div
+        initial={{
+          opacity: 0,
+
+          y: -20,
+          filter: "blur(20px)",
+          transition: { ease: "easeIn", duration: 0.22 },
+        }}
+        animate={{
+          opacity: 1,
+
+          y: 0,
+          filter: "blur(0px)",
+          transition: { type: "spring", duration: 2 },
+        }}
+        className="container mx-auto my-8"
+      >
         <nav className="border-grey relative grid grid-cols-3 items-center rounded-xl border-2 px-7 text-sm font-semibold">
           <div className="flex justify-start gap-4">
             <ul className="flex gap-4">
@@ -71,8 +72,8 @@ export default function Navbar() {
             </ul>
           </div>
         </nav>
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 }
 
