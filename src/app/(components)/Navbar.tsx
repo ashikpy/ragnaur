@@ -39,7 +39,7 @@ export default function Navbar() {
           <div className="flex items-center justify-center">
             <Link href={"/"} className="bg-grey flex items-center gap-2 pr-4">
               <Image src={ragnaur} alt="logo of ragnaor" className="size-14" />
-              <h1 className="-ml-2 pr-14 text-lg font-bold uppercase md:p-0">
+              <h1 className="-ml-2 pr-14 text-lg font-bold uppercase sm:pr-0 md:p-0">
                 Ragnaor
               </h1>
             </Link>

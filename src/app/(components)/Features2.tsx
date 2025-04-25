@@ -27,7 +27,7 @@ export default function Features2() {
       <h1 className="mb-7 text-center text-3xl font-black md:mb-20 md:text-7xl">
         Why Choose Us?
       </h1>
-      <div className="m-4 flex flex-col justify-center gap-10 md:m-0 md:flex-row md:gap-5">
+      <div className="m-4 flex flex-col items-center justify-center gap-10 md:m-0 md:flex-row md:items-stretch md:gap-5">
         {Features.map((feature, index) => {
           const borderColors = [
             "border-orange",
@@ -74,15 +74,15 @@ function SectionCard({
 }) {
   return (
     <div
-      className={`flex max-w-sm flex-col items-center rounded-lg border-2 p-8 py-10 text-center shadow-xl/25 ${borderColor} ${bgColor} ${shadowColors}`}
+      className={`flex max-w-sm flex-col items-center rounded-lg border-2 p-8 py-10 text-center shadow-xl/25 sm:max-w-none ${borderColor} ${bgColor} ${shadowColors}`}
     >
       <div
         className={`grid size-[5rem] place-items-center rounded-full border-2 text-4xl font-bold ${borderColor} ${bgColor}`}
       >
         <p>{icon}</p>
       </div>
-      <h3 className="mt-10 text-xl font-bold">{title}</h3>
-      <p className="mt-3 text-sm leading-6 text-black/80 md:text-base md:leading-7">
+      <h3 className="mt-10 text-xl font-bold md:text-sm lg:text-xl">{title}</h3>
+      <p className="mt-3 text-sm leading-6 text-black/80 sm:text-base md:text-xs lg:text-sm xl:text-base xl:leading-7">
         {description}
       </p>
     </div>

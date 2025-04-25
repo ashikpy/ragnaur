@@ -8,7 +8,7 @@ export default function page() {
       <h1 className="text-center text-4xl font-black md:text-7xl">
         Our Products
       </h1>
-      <div className="mt-10 grid gap-7 md:mt-14 md:grid-cols-4">
+      <div className="mt-10 grid gap-7 sm:grid-cols-2 md:mt-14 lg:grid-cols-3 xl:grid-cols-4">
         {ProductData.map((product, index) => (
           <div key={index} className="flex justify-center">
             <ProductCard

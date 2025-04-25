@@ -6,7 +6,7 @@ import ragnaur from "../../../public/ragnaur.png";
 export default function Footer() {
   return (
     <footer className="bg-grey mt-32 p-8">
-      <div className="flex flex-col items-center justify-around gap-10 md:flex-row md:gap-0">
+      <div className="flex flex-col items-center justify-around gap-10 lg:flex-row lg:gap-0">
         <Left />
         <Middle />
         <Right />
@@ -45,7 +45,7 @@ const Left = () => {
 const Middle = () => {
   return (
     <div className="">
-      <h2 className="text-center text-2xl font-bold md:text-left">
+      <h2 className="text-center text-2xl font-bold lg:text-left">
         Quick Links
       </h2>
       <div className="mt-3 flex justify-between gap-20 text-sm font-semibold">
@@ -54,7 +54,7 @@ const Middle = () => {
           <li>Blog</li>
           <li>Training</li>
         </ul>
-        <ul className="text-right leading-7 md:text-left">
+        <ul className="text-right leading-7 lg:text-left">
           <li>Gromming</li>
           <li>DIY Recipes</li>
           <li>Check Dog Health</li>
@@ -66,14 +66,14 @@ const Middle = () => {
 const Right = () => {
   return (
     <div className="flex flex-col gap-2">
-      <h2 className="text-center text-2xl font-bold md:text-left">Contact</h2>
+      <h2 className="text-center text-2xl font-bold lg:text-left">Contact</h2>
       <div className="flex items-center rounded-lg border-2">
         <input type="email" placeholder="Your Email " className="p-3" />
         <button type="submit" className="rounded-r-md bg-black p-3">
           <MoveRight color="white" />
         </button>
       </div>
-      <p className="text-center md:text-left">contact@ragnaor.com</p>
+      <p className="text-center lg:text-left">contact@ragnaor.com</p>
     </div>
   );
 };

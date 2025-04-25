@@ -4,7 +4,7 @@ import ProductCard from "@/utils/ProductCard";
 
 export default function Products() {
   return (
-    <div className="mt-10">
+    <div className="mt-20 md:mt-0">
       <h1 className="text-center text-5xl font-black md:text-right md:text-7xl">
         Our Products
       </h1>
@@ -17,7 +17,7 @@ export default function Products() {
 
 const ProductsSection = () => {
   return (
-    <div className="grid gap-7 md:grid-cols-4">
+    <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {ProductData.map((product, index) => (
         <div key={index} className="flex justify-center">
           <ProductCard

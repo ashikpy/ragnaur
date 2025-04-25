@@ -26,7 +26,7 @@ export default function LeftSection({
 
   return (
     <div
-      className={`${onStock ? "bg-grey border-black/10 shadow" : "border-red-500 bg-red-500/10"} relative m-4 flex flex-col gap-5 overflow-hidden rounded-xl border-2 p-5 md:m-0 md:p-20`}
+      className={`${onStock ? "bg-grey border border-black/10 shadow" : "border-2 border-red-500 bg-red-500/10"} relative m-4 flex flex-col gap-5 overflow-hidden rounded-xl p-5 md:m-0 md:mt-10 md:p-20 lg:mt-0`}
     >
       {!onStock && <OutOfStockNotice />}
 

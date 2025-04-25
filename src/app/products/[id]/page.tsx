@@ -10,7 +10,7 @@ interface PageProps {
   };
 }
 
-export default async function Page({ params }: PageProps) {
+export default function Page({ params }: PageProps) {
   const data = ProductData[Number(params.id)];
 
   return (
@@ -38,9 +38,13 @@ interface ProductData {
 
 const TopSection = ({ data }: { data: ProductData }) => {
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col lg:flex-row">
       <div className="grid w-full place-items-center">
-        <Image src={data.Img} alt={data.title} />
+        <Image
+          src={data.Img}
+          alt={data.title}
+          className="w-[20rem] lg:w-auto"
+        />
       </div>
       <LeftSection
         title={data.title}
@@ -62,7 +66,7 @@ const ButtonSection = () => {
       <h1 className="mt-10 text-center text-3xl font-black md:mt-20 md:text-left md:text-6xl">
         Suggested Products
       </h1>
-      <div className="mt-10 grid gap-7 md:grid-cols-4">
+      <div className="mt-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {ProductData.map((product, index) => (
           <div key={index} className="flex justify-center">
             <ProductCard
