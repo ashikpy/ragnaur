@@ -1,5 +1,5 @@
-import WildChicken from "../../public/Red.png";
-import LiverChunks from "../../public/Green.png";
+import WildChicken from "../../public/WildChicken.png";
+import LiverChunks from "../../public/LiverChunks.png";
 import LumpChunks from "../../public/Violet.png";
 import VeggiesAndChicken from "../../public/Orange.png";
 

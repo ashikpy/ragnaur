@@ -4,14 +4,22 @@ import LeftSection from "./(components)/LeftSection";
 import { ProductData } from "@/utils/Data";
 import ProductCard from "@/utils/ProductCard";
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const productId = Number(id);
+  const data = ProductData[productId];
 
-export default function Page({ params }: PageProps) {
-  const data = ProductData[Number(params.id)];
+  if (!data) {
+    return (
+      <div className="flex h-screen w-full items-center justify-center">
+        <h1 className="text-3xl font-black">Product Not Found</h1>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -23,7 +31,7 @@ export default function Page({ params }: PageProps) {
   );
 }
 
-interface ProductData {
+interface ProductDataInterface {
   id: number;
   Img: StaticImageData;
   title: string;
@@ -36,7 +44,7 @@ interface ProductData {
   nonVeg: boolean;
 }
 
-const TopSection = ({ data }: { data: ProductData }) => {
+const TopSection = ({ data }: { data: ProductDataInterface }) => {
   return (
     <div className="flex flex-col lg:flex-row">
       <div className="grid w-full place-items-center">

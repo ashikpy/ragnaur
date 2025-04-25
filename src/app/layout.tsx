@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "Dog Toys",
     "Dog Accessories",
   ],
-  colorScheme: "light",
+
   openGraph: {
     title: "Ragnaor - A Non-Profit Dog Organization",
     description:
