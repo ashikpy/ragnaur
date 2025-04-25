@@ -1,9 +1,29 @@
+"use client";
 import { Beef, MapPinHouse } from "lucide-react";
 import React from "react";
+import { motion } from "motion/react";
 
 export default function Features() {
   return (
-    <div className="flex justify-center md:mt-[-8rem] md:block">
+    <motion.div
+      initial={{
+        opacity: 0,
+        scale: 0.7,
+        filter: "blur(20px)",
+        transition: { ease: "easeIn", duration: 0.22 },
+      }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+        filter: "blur(0px)",
+        transition: { type: "spring", duration: 0.2 },
+      }}
+      transition={{
+        duration: 0.5,
+        delay: 0.2,
+      }}
+      className="flex justify-center md:mt-[-8rem] md:block"
+    >
       <div className="bg-yellow m-4 flex flex-col items-center gap-14 rounded-2xl p-10 sm:max-w-lg md:mt-[4rem] md:max-w-none md:flex-row md:items-stretch md:gap-10 xl:gap-20">
         <Feature1 />
         <Feature2 />
@@ -14,7 +34,7 @@ export default function Features() {
           ❤️ it
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
