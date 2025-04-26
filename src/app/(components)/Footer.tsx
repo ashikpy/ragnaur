@@ -74,6 +74,15 @@ const Right = () => {
         </button>
       </div>
       <p className="text-center lg:text-left">contact@ragnaor.com</p>
+      <p className="text-center text-sm text-black/70 lg:text-left">
+        Made with ❤️ by{" "}
+        <a
+          href="https://ashikpy.tech"
+          className="font-bold text-black underline"
+        >
+          Ashik. D.
+        </a>
+      </p>
     </div>
   );
 };
